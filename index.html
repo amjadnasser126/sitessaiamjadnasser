@@ -13,10 +13,7 @@
   />
 
   <style>
-    /* ── Reset ─────────────────────────────────────────────────────────── */
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -69,35 +66,22 @@
       margin: 0 auto;
     }
 
-    /* ── Scroll animation ──────────────────────────────────────────────── */
     .reveal {
       opacity: 0;
       transform: translateY(28px);
       transition: opacity 0.65s ease, transform 0.65s ease;
     }
 
-    .reveal.d1 {
-      transition-delay: 0.08s;
-    }
-
-    .reveal.d2 {
-      transition-delay: 0.16s;
-    }
-
-    .reveal.d3 {
-      transition-delay: 0.24s;
-    }
-
-    .reveal.d4 {
-      transition-delay: 0.32s;
-    }
+    .reveal.d1 { transition-delay: 0.08s; }
+    .reveal.d2 { transition-delay: 0.16s; }
+    .reveal.d3 { transition-delay: 0.24s; }
+    .reveal.d4 { transition-delay: 0.32s; }
 
     .reveal.show {
       opacity: 1;
       transform: none;
     }
 
-    /* ── NAV ───────────────────────────────────────────────────────────── */
     #nav {
       position: sticky;
       top: 0;
@@ -203,7 +187,6 @@
       display: flex;
     }
 
-    /* ── HERO ──────────────────────────────────────────────────────────── */
     #hero {
       padding: 60px 0 52px;
       background:
@@ -268,9 +251,7 @@
       transition: opacity 0.2s;
     }
 
-    .btn-primary:hover {
-      opacity: 0.88;
-    }
+    .btn-primary:hover { opacity: 0.88; }
 
     .btn-outline {
       font-family: Inter, sans-serif;
@@ -288,9 +269,7 @@
       transition: border-color 0.2s;
     }
 
-    .btn-outline:hover {
-      border-color: var(--accent);
-    }
+    .btn-outline:hover { border-color: var(--accent); }
 
     .btn-ghost {
       font-family: Inter, sans-serif;
@@ -333,7 +312,6 @@
       object-fit: cover;
     }
 
-    /* ── ABOUT ─────────────────────────────────────────────────────────── */
     #about {
       padding: 40px 0 72px;
     }
@@ -443,7 +421,6 @@
       color: var(--dark);
     }
 
-    /* ── SKILLS ────────────────────────────────────────────────────────── */
     #skills {
       padding: 0 0 84px;
     }
@@ -465,13 +442,8 @@
       box-shadow: 0 2px 12px rgba(28, 23, 20, 0.05);
     }
 
-    .skill-block:nth-child(odd) {
-      background: var(--white);
-    }
-
-    .skill-block:nth-child(even) {
-      background: var(--card-a);
-    }
+    .skill-block:nth-child(odd) { background: var(--white); }
+    .skill-block:nth-child(even) { background: var(--card-a); }
 
     .skill-block h3 {
       font-size: 25px;
@@ -513,7 +485,6 @@
       color: #fff;
     }
 
-    /* ── PROJECTS ──────────────────────────────────────────────────────── */
     #projects {
       padding: 0 0 92px;
     }
@@ -595,7 +566,6 @@
       padding: 0;
     }
 
-    /* ── EXPERIENCE ────────────────────────────────────────────────────── */
     #experience {
       padding: 0 0 96px;
     }
@@ -708,7 +678,6 @@
       margin-top: 16px;
     }
 
-    /* ── INTERESTS ─────────────────────────────────────────────────────── */
     #interests {
       padding: 0 0 92px;
     }
@@ -726,13 +695,8 @@
       box-shadow: 0 2px 12px rgba(28, 23, 20, 0.05);
     }
 
-    .interest-card:nth-child(odd) {
-      background: var(--white);
-    }
-
-    .interest-card:nth-child(even) {
-      background: var(--card-a);
-    }
+    .interest-card:nth-child(odd) { background: var(--white); }
+    .interest-card:nth-child(even) { background: var(--card-a); }
 
     .interest-card h3 {
       font-size: 30px;
@@ -748,7 +712,6 @@
       color: var(--mid);
     }
 
-    /* ── CONTACT ───────────────────────────────────────────────────────── */
     #contact {
       padding: 0 0 100px;
     }
@@ -875,9 +838,7 @@
       transition: opacity 0.2s;
     }
 
-    .btn-send:hover {
-      opacity: 0.88;
-    }
+    .btn-send:hover { opacity: 0.88; }
 
     #form-ok {
       display: none;
@@ -889,7 +850,6 @@
       line-height: 1.6;
     }
 
-    /* ── FOOTER ────────────────────────────────────────────────────────── */
     footer {
       padding: 28px 0;
       border-top: 1px solid var(--div);
@@ -902,7 +862,6 @@
       color: var(--mid);
     }
 
-    /* ── MODAL ─────────────────────────────────────────────────────────── */
     #modal {
       display: none;
       position: fixed;
@@ -1105,136 +1064,54 @@
       margin-top: 12px;
     }
 
-    /* ── RESPONSIVE ────────────────────────────────────────────────────── */
     @media (max-width: 1024px) {
-      .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .project-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-title {
-        font-size: 52px;
-      }
-
-      .contact-wrap {
-        grid-template-columns: 1fr;
-      }
-
-      .modal-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .modal-title {
-        font-size: 44px;
-      }
-
-      .form-grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .illus-3 {
-        grid-template-columns: 1fr 1fr;
-      }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 52px; }
+      .contact-wrap { grid-template-columns: 1fr; }
+      .modal-grid { grid-template-columns: 1fr; }
+      .modal-title { font-size: 44px; }
+      .form-grid-2 { grid-template-columns: 1fr; }
+      .illus-3 { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .btn-nav {
-        display: none;
-      }
-
-      .hamburger {
-        display: block;
-      }
-
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .project-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-title {
-        font-size: 42px;
-      }
-
-      .big-title {
-        font-size: 38px;
-      }
-
-      .c-left h2 {
-        font-size: 40px;
-      }
-
-      .modal-title {
-        font-size: 36px;
-      }
-
-      .timeline::before {
-        display: none;
-      }
-
-      .t-item {
-        flex-direction: column;
-        gap: 8px;
-      }
-
+      .nav-links { display: none; }
+      .btn-nav { display: none; }
+      .hamburger { display: block; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .project-grid { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .hero-title { font-size: 42px; }
+      .big-title { font-size: 38px; }
+      .c-left h2 { font-size: 40px; }
+      .modal-title { font-size: 36px; }
+      .timeline::before { display: none; }
+      .t-item { flex-direction: column; gap: 8px; }
       .t-year {
         width: auto;
         text-align: left;
         padding-right: 0;
         padding-top: 0;
       }
-
-      .t-dot-wrap {
-        display: none;
-      }
-
-      .t-card {
-        margin-left: 0;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .illus-2,
-      .illus-3 {
-        grid-template-columns: 1fr;
-      }
+      .t-dot-wrap { display: none; }
+      .t-card { margin-left: 0; }
+      .form-row { grid-template-columns: 1fr; }
+      .illus-2, .illus-3 { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 480px) {
-      .hero-title {
-        font-size: 34px;
-      }
-
-      .about-card {
-        padding: 24px 18px;
-      }
+      .hero-title { font-size: 34px; }
+      .about-card { padding: 24px 18px; }
     }
   </style>
 </head>
-
 <body>
-  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+
   <header id="nav">
     <div class="container nav-inner">
       <a href="#hero" class="nav-logo">AMJAD NASSER</a>
@@ -1283,7 +1160,6 @@
   </header>
 
   <main>
-    <!-- ═══════════════ HERO ═══════════════ -->
     <section id="hero">
       <div class="container hero-grid">
         <div>
@@ -1316,7 +1192,6 @@
       </div>
     </section>
 
-    <!-- ═══════════════ A PROPOS ═══════════════ -->
     <section id="about">
       <div class="container">
         <div class="about-card reveal">
@@ -1366,7 +1241,6 @@
       </div>
     </section>
 
-    <!-- ═══════════════ COMPETENCES ═══════════════ -->
     <section id="skills" style="padding-top:72px">
       <div class="container">
         <div class="section-intro reveal">
@@ -1446,7 +1320,6 @@
       </div>
     </section>
 
-    <!-- ═══════════════ PROJETS ═══════════════ -->
     <section id="projects" style="padding-top:84px">
       <div class="container">
         <div class="reveal">
@@ -1457,7 +1330,6 @@
       </div>
     </section>
 
-    <!-- ═══════════════ EXPERIENCE ═══════════════ -->
     <section id="experience" style="padding-top:84px">
       <div class="container">
         <div class="reveal">
@@ -1513,7 +1385,6 @@
       </div>
     </section>
 
-    <!-- ═══════════════ INTERETS ═══════════════ -->
     <section id="interests" style="padding-top:84px">
       <div class="container">
         <div class="reveal">
@@ -1545,7 +1416,6 @@
       </div>
     </section>
 
-    <!-- ═══════════════ CONTACT ═══════════════ -->
     <section id="contact" style="padding-top:84px">
       <div class="container">
         <div class="contact-wrap reveal">
@@ -1597,14 +1467,12 @@
     </section>
   </main>
 
-  <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer>
     <div class="container">
       <p>© 2026 Amjad Nasser — Portfolio Data Analyst · Paris</p>
     </div>
   </footer>
 
-  <!-- ═══════════════ MODAL ═══════════════ -->
   <div id="modal" role="dialog" aria-modal="true">
     <div class="modal-body container">
       <button class="btn-back" onclick="closeModal()">← Retour aux projets</button>
@@ -1612,7 +1480,6 @@
     </div>
   </div>
 
-  <!-- ═══════════════ JS ═══════════════ -->
   <script>
     const PROJECTS = [
       {
@@ -1633,6 +1500,7 @@
         ],
         imgs: ["img/PhotoProjetsas1.png", "img/PhotoProjetsas2.png"],
         imgLayout: "illus-2",
+        showIllustrationTitle: true,
         pdf: null
       },
       {
@@ -1653,6 +1521,7 @@
         ],
         imgs: [],
         imgLayout: null,
+        showIllustrationTitle: false,
         pdf: null
       },
       {
@@ -1673,8 +1542,8 @@
         ],
         imgs: ["img/Projetsondage1.png", "img/PhotoProjetsondage2.png", "img/PhotoProjetsondage3.png"],
         imgLayout: "illus-3",
-        pdf: null,
-        pdfLabel: null
+        showIllustrationTitle: true,
+        pdf: null
       },
       {
         slug: "conformite-rgpd",
@@ -1694,6 +1563,7 @@
         ],
         imgs: [],
         imgLayout: null,
+        showIllustrationTitle: false,
         pdf: null
       },
       {
@@ -1712,8 +1582,9 @@
           { l: "Résultats", t: "Tableaux de bord interactifs permettant une lecture immédiate des données par territoire, avec navigation intuitive et filtres multi-niveaux." },
           { l: "Impact", t: "Amélioration de la lisibilité des données géospatiales et aide à la décision basée sur la localisation." }
         ],
-        imgs: ["img/Capture_decran_2026-04-01_134747.png"],
+        imgs: ["img/Capture_decran_2026-04-01_13474.png"],
         imgLayout: "illus-1",
+        showIllustrationTitle: false,
         pdf: "img/datavizchallenge.pdf",
         pdfLabel: "Data Viz Challenge"
       },
@@ -1729,6 +1600,7 @@
         sections: [{ l: "Contexte", t: "Contenu à venir." }],
         imgs: [],
         imgLayout: null,
+        showIllustrationTitle: false,
         pdf: null
       }
     ];
@@ -1788,7 +1660,7 @@
     function imgError(img) {
       const wrapper = img.closest(".illus-img");
       if (!wrapper) return;
-      wrapper.innerHTML = `<div class="img-fallback">Image indisponible dans le dossier <strong style="margin-left:4px;">img</strong>.</div>`;
+      wrapper.style.display = "none";
     }
 
     function openModal(slug) {
@@ -1822,11 +1694,13 @@
           )
           .join("");
 
-        illusH += `
-          <div class="illus-section">
-            <p class="illus-label">Illustrations du projet</p>
-            <div class="${p.imgLayout || "illus-1"}">${imgsH}</div>
-        `;
+        illusH += `<div class="illus-section">`;
+
+        if (p.showIllustrationTitle) {
+          illusH += `<p class="illus-label">Illustrations du projet</p>`;
+        }
+
+        illusH += `<div class="${p.imgLayout || "illus-1"}">${imgsH}</div>`;
 
         if (p.pdf) {
           illusH += `
