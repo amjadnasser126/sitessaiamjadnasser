@@ -493,8 +493,8 @@
     }
 
     .tlogo {
-      width: 24px;
-      height: 24px;
+      width: 30px;
+      height: 30px;
       object-fit: contain;
       flex-shrink: 0;
       border-radius: 4px;
@@ -1619,7 +1619,8 @@
           "./img/Projetsondage1.png",
           "./img/PhotoProjetsondage2.png",
           "./img/PhotoProjetsondage3.png",
-          "./img/Freins.png"
+          "./img/Freins.png",
+          "./img/Capture_decran_2026-04-01_13474.png"
         ],
         imgLayout: "illus-2",
         showIllustrationTitle: true,
@@ -1660,8 +1661,8 @@
           { l: "Résultats", t: "Tableaux de bord interactifs permettant une lecture immédiate des données par territoire, avec navigation intuitive et filtres multi-niveaux." },
           { l: "Impact", t: "Amélioration de la lisibilité des données géospatiales et aide à la décision basée sur la localisation." }
         ],
-        imgs: ["./img/Capture_decran_2026-04-01_13474.png"],
-        imgLayout: "illus-1",
+        imgs: [],
+        imgLayout: null,
         showIllustrationTitle: false,
         pdf: "./img/datavizchallenge.pdf",
         pdfLabel: "Data Viz Challenge"
@@ -1683,13 +1684,13 @@
     ];
 
     const LOGOS = {
-      "SQL": { type: "img", src: "./img/sql-logo.jpg" },
-      "Power BI": { type: "img", src: "./img/power-bi-logo.jpg" },
-      "Excel": { type: "img", src: "./img/Excel-logo.jpg" },
-      "Python": { type: "img", src: "./img/Python-Logo.png" }
+      "SQL": { src: "./img/sql-logo.jpg" },
+      "Power BI": { src: "./img/power-bi-logo.jpg" },
+      "Excel": { src: "./img/Excel-logo.jpg" },
+      "Python": { src: "./img/Python-Logo.png" }
     };
 
-    function logoH(name, size = 18) {
+    function logoH(name, size = 22) {
       const l = LOGOS[name];
       if (!l) return "";
       return `<img src="${l.src}" alt="${name}" style="width:${size}px;height:${size}px;object-fit:contain;flex-shrink:0;border-radius:4px" onerror="this.style.display='none'">`;
@@ -1702,7 +1703,7 @@
       PROJECTS.forEach((p, i) => {
         const d = i % 3 === 1 ? " d1" : i % 3 === 2 ? " d2" : "";
         const metrics = p.metrics
-          .map((metric) => `<span class="metric-tag">${logoH(metric, 18)}${metric}</span>`)
+          .map((metric) => `<span class="metric-tag">${logoH(metric, 22)}${metric}</span>`)
           .join("");
 
         html += `
@@ -1737,7 +1738,7 @@
       const metricsH = p.metrics
         .map(
           (metric) =>
-            `<span style="padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid rgba(28,23,20,.12);font-family:Inter,sans-serif;font-size:13px;color:#1a1512;display:inline-flex;align-items:center;gap:7px">${logoH(metric, 20)}${metric}</span>`
+            `<span style="padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid rgba(28,23,20,.12);font-family:Inter,sans-serif;font-size:13px;color:#1a1512;display:inline-flex;align-items:center;gap:7px">${logoH(metric, 24)}${metric}</span>`
         )
         .join("");
 
