@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -56,6 +55,10 @@
     img {
       display: block;
       max-width: 100%;
+    }
+
+    .sans {
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
     }
 
     .container {
@@ -200,19 +203,9 @@
 
     .label {
       font-family: Inter, sans-serif;
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 800;
-      letter-spacing: 2.8px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 18px;
-    }
-
-    .label-sub {
-      font-family: Inter, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.8px;
+      letter-spacing: 2.6px;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 18px;
@@ -351,13 +344,8 @@
     .body-text {
       font-family: Inter, sans-serif;
       font-size: 17px;
-      line-height: 1.75;
+      line-height: 1.85;
       color: var(--mid);
-    }
-
-    .about-text {
-      max-width: 1120px;
-      line-height: 1.65;
     }
 
     .divider {
@@ -498,7 +486,17 @@
       height: 16px;
       object-fit: contain;
       flex-shrink: 0;
-      border-radius: 2px;
+    }
+
+    .tbadge {
+      font-family: Inter, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      line-height: 1.4;
+      color: #fff;
     }
 
     .project-grid {
@@ -562,9 +560,9 @@
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.55);
       color: #4b413c;
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .project-link {
@@ -727,8 +725,8 @@
     }
 
     .interest-icon {
-      width: 42px;
-      height: 42px;
+      width: 38px;
+      height: 38px;
       border-radius: 12px;
       background: rgba(140, 47, 36, 0.08);
       border: 1px solid rgba(140, 47, 36, 0.12);
@@ -740,8 +738,8 @@
     }
 
     .interest-icon img {
-      width: 26px;
-      height: 26px;
+      width: 24px;
+      height: 24px;
       object-fit: contain;
     }
 
@@ -1125,7 +1123,6 @@
       .grid-2 { grid-template-columns: 1fr; }
       .hero-title { font-size: 44px; }
       .big-title { font-size: 46px; }
-      .label { font-size: 16px; }
       .c-left h2 { font-size: 40px; }
       .modal-title { font-size: 36px; }
       .timeline::before { display: none; }
@@ -1240,12 +1237,14 @@
         <div class="about-card reveal">
           <p class="label">Qui suis-je ?</p>
           <h2 class="big-title">De la donnée à la décision.</h2>
-          <p class="body-text about-text">
-            Avec une double formation en sciences de la santé puis en science des données, j’aborde chaque problématique avec rigueur et sens analytique du contexte métier. J’analyse, structure et exploite des données sur l’ensemble du cycle data, de la préparation à la modélisation, en veillant à restituer les résultats aux équipes métiers avec une approche claire et un storytelling adapté. Mon objectif : produire des résultats clairs, fiables et directement exploitables.
+          <p class="body-text">
+            Avec une double formation en sciences de la santé puis en science des données, j’aborde chaque problématique avec rigueur et sens analytique du contexte métier.<br><br>
+            J’analyse, structure et exploite des données sur l’ensemble du cycle data, de la préparation à la modélisation, en veillant à restituer les résultats aux équipes métiers avec une approche claire et un storytelling adapté.<br><br>
+            Mon objectif : produire des résultats clairs, fiables et directement exploitables.
           </p>
 
           <hr class="divider" />
-          <p class="label-sub">Ma formation</p>
+          <p class="label" style="margin-bottom:18px">Ma formation</p>
 
           <div class="form-grid-2">
             <div class="card-sm" style="background:var(--card-a)">
@@ -1275,7 +1274,7 @@
           </div>
 
           <div class="lang-row">
-            <span style="font-family:Inter,sans-serif;font-size:13px;font-weight:600;color:var(--mid)">Langues :</span>
+            <span class="sans" style="font-size:13px;font-weight:600;color:var(--mid)">Langues :</span>
             <span class="badge">Français | natif</span>
             <span class="badge">Anglais | courant | SAT 1420/1600</span>
             <span class="badge">Espagnol | B2</span>
@@ -1299,21 +1298,21 @@
             <div class="skill-block reveal">
               <h3>Outils d’analyse</h3>
               <ul class="skill-list">
-                <li><img class="tlogo" src="./img/sql-logo.jpg" alt="SQL" /> SQL</li>
-                <li><img class="tlogo" src="./img/power-bi-logo.jpg" alt="Power BI" /> Power BI</li>
-                <li>Power Query</li>
-                <li><img class="tlogo" src="./img/Excel-logo.jpg" alt="Excel" /> Excel avancé</li>
-                <li>Microsoft Azure</li>
-                <li>Git</li>
+                <li><img class="tlogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="SQL" /> SQL</li>
+                <li><span class="tbadge" style="background:#d4a800;color:#111">BI</span> Power BI</li>
+                <li><span class="tbadge" style="background:#217346">XLS</span> Power Query</li>
+                <li><span class="tbadge" style="background:#217346">XLS</span> Excel avancé</li>
+                <li><span class="tbadge" style="background:#0078d4">AZ</span> Microsoft Azure</li>
+                <li><img class="tlogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" /> Git</li>
               </ul>
             </div>
 
             <div class="skill-block reveal d1">
               <h3>Langages</h3>
               <ul class="skill-list">
-                <li><img class="tlogo" src="./img/Python-Logo.png" alt="Python" /> Python avec Pandas, Matplotlib, PySpark et Scikit-learn</li>
-                <li>R</li>
-                <li>SAS</li>
+                <li><img class="tlogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" /> Python avec Pandas, Matplotlib, PySpark et Scikit-learn</li>
+                <li><img class="tlogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" alt="R" /> R</li>
+                <li><span class="tbadge" style="background:#004F9F">SAS</span> SAS</li>
               </ul>
             </div>
 
@@ -1447,7 +1446,7 @@
         <div class="section-card reveal">
           <div class="section-intro">
             <p class="label">Centres d’intérêt</p>
-            <h2 class="big-title">Ce que ces pratiques m’ont appris.</h2>
+            <h2 class="big-title">Centres d’intérêt</h2>
           </div>
 
           <div class="grid-2">
@@ -1565,6 +1564,7 @@
         slug: "reporting-sas-excel",
         cat: "Automatisation et pilotage",
         title: "Automatisation du reporting pour améliorer le suivi de la performance",
+        sub: "SAS et Excel | 2025",
         accent: "#8f3a2e",
         bg: "#e8d9c5",
         desc: "Mise en place d’un système automatisé permettant de produire des indicateurs de performance de manière fiable et régulière.",
@@ -1576,7 +1576,7 @@
           { l: "Résultats", t: "Production automatisée d’indicateurs KPI, réduction significative du temps de traitement, restitution claire et structurée sous Excel." },
           { l: "Impact", t: "Amélioration du pilotage de la performance et renforcement de la capacité de décision basée sur les données." }
         ],
-        imgs: ["./img/PhotoProjetsas1.png", "./img/PhotoProjetsas2.png"],
+        imgs: ["img/PhotoProjetsas1.png", "img/PhotoProjetsas2.png"],
         imgLayout: "illus-2",
         showIllustrationTitle: true,
         pdf: null
@@ -1585,6 +1585,7 @@
         slug: "analyse-cancer-sein",
         cat: "Analyse statistique",
         title: "Analyse de données médicales pour identifier des facteurs significatifs",
+        sub: "Avec R | 2025",
         accent: "#7a3a10",
         bg: "#eddfc8",
         desc: "Analyse statistique d’un dataset médical afin de détecter des variables influençant le diagnostic et améliorer la compréhension des données.",
@@ -1605,6 +1606,7 @@
         slug: "enquete-etudiante",
         cat: "Data visualisation",
         title: "Reporting et visualisation - Enquête étudiante",
+        sub: "Université Paris Cité | 2024",
         accent: "#7a4210",
         bg: "#e5d4b2",
         desc: "Analyse de plus de 20 000 réponses pour produire des visualisations claires et exploitables.",
@@ -1617,10 +1619,10 @@
           { l: "Impact", t: "Aide à la décision pour les équipes universitaires grâce à des insights actionnables issus de données massives." }
         ],
         imgs: [
-          "./img/Projetsondage1.png",
-          "./img/PhotoProjetsondage2.png",
-          "./img/PhotoProjetsondage3.png",
-          "./img/Freins.png"
+          "img/Projetsondage1.png",
+          "img/PhotoProjetsondage2.png",
+          "img/PhotoProjetsondage3.png",
+          "img/Freins.png"
         ],
         imgLayout: "illus-2",
         showIllustrationTitle: true,
@@ -1630,6 +1632,7 @@
         slug: "conformite-rgpd",
         cat: "Data governance et RGPD",
         title: "Analyse de conformité RGPD et structuration des données",
+        sub: "Bases clients et campagnes | 2025",
         accent: "#5c3a6b",
         bg: "#e8dff0",
         desc: "Identification des risques liés aux données et proposition de recommandations pour améliorer la gouvernance et la conformité.",
@@ -1650,6 +1653,7 @@
         slug: "powerbi-carte",
         cat: "Power BI et data visualisation",
         title: "Visualisation cartographique et tableaux de bord",
+        sub: "Power BI | 2025",
         accent: "#1a5276",
         bg: "#d6eaf8",
         desc: "Conception de tableaux de bord interactifs intégrant des visualisations cartographiques pour restituer des données géospatiales de manière claire et exploitable.",
@@ -1661,16 +1665,17 @@
           { l: "Résultats", t: "Tableaux de bord interactifs permettant une lecture immédiate des données par territoire, avec navigation intuitive et filtres multi-niveaux." },
           { l: "Impact", t: "Amélioration de la lisibilité des données géospatiales et aide à la décision basée sur la localisation." }
         ],
-        imgs: ["./img/Capture_decran_2026-04-01_13474.png"],
+        imgs: ["img/Capture_decran_2026-04-01_13474.png"],
         imgLayout: "illus-1",
         showIllustrationTitle: false,
-        pdf: "./img/datavizchallenge.pdf",
+        pdf: "img/datavizchallenge.pdf",
         pdfLabel: "Data Viz Challenge"
       },
       {
         slug: "stage",
         cat: "Stage",
         title: "Projet en cours : missions et résultats à venir",
+        sub: "À venir | 2026",
         accent: "#7a6a5a",
         bg: "#ece9e4",
         desc: "Projet en cours : missions et résultats à venir.",
@@ -1684,16 +1689,24 @@
     ];
 
     const LOGOS = {
-      "SQL": { type: "img", src: "./img/sql-logo.jpg" },
-      "Power BI": { type: "img", src: "./img/power-bi-logo.jpg" },
-      "Excel": { type: "img", src: "./img/Excel-logo.jpg" },
-      "Python": { type: "img", src: "./img/Python-Logo.png" }
+      "SQL": { t: "img", s: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+      "Python": { t: "img", s: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+      "R": { t: "img", s: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" },
+      "Git": { t: "img", s: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+      "Power BI": { t: "badge", bg: "#d4a800", fg: "#111" },
+      "Excel": { t: "badge", bg: "#217346", fg: "#fff" },
+      "SAS": { t: "badge", bg: "#004F9F", fg: "#fff" }
     };
 
-    function logoH(name, size = 14) {
+    function logoH(name, sz = 14) {
       const l = LOGOS[name];
       if (!l) return "";
-      return `<img src="${l.src}" alt="${name}" style="width:${size}px;height:${size}px;object-fit:contain;flex-shrink:0;border-radius:2px" onerror="this.style.display='none'">`;
+
+      if (l.t === "img") {
+        return `<img src="${l.s}" alt="${name}" style="width:${sz}px;height:${sz}px;object-fit:contain;flex-shrink:0">`;
+      }
+
+      return `<span style="background:${l.bg};color:${l.fg};font-family:Inter,sans-serif;font-size:9px;font-weight:700;padding:2px 5px;border-radius:4px;flex-shrink:0;line-height:1.4">${name}</span>`;
     }
 
     function renderCards() {
@@ -1845,7 +1858,7 @@
 
     function dlCV() {
       const a = document.createElement("a");
-      a.href = "./img/CV_Amjad_Nasser_data.pdf";
+      a.href = "img/CV_Amjad_Nasser_data.pdf";
       a.download = "CV_Amjad_Nasser.pdf";
       document.body.appendChild(a);
       a.click();
@@ -1911,4 +1924,3 @@
   </script>
 </body>
 </html>
-```
