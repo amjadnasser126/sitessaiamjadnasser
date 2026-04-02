@@ -1481,129 +1481,134 @@
   </div>
 
   <script>
-    const PROJECTS = [
-      {
-        slug: "reporting-sas-excel",
-        cat: "Automatisation & pilotage",
-        title: "Automatisation du reporting et du pilotage",
-        sub: "SAS & Excel — 2025",
-        accent: "#8f3a2e",
-        bg: "#e8d9c5",
-        desc: "Mise en place d'un système automatisé pour industrialiser la production d'indicateurs et améliorer le suivi de la performance.",
-        metrics: ["SAS", "Excel", "KPI"],
-        sections: [
-          { l: "Contexte", t: "Besoin d'industrialiser la production de reporting dans un environnement data structuré, avec des traitements récurrents à piloter efficacement." },
-          { l: "Problème", t: "Des traitements répétitifs et chronophages, sans automatisation ni standardisation des indicateurs de suivi." },
-          { l: "Approche", t: "Développement de macros SAS paramétrables à partir d'un fichier de pilotage. Structuration des sorties Excel pour faciliter la lecture et la prise de décision." },
-          { l: "Résultats", t: "Production automatisée d'indicateurs KPI, réduction significative du temps de traitement, restitution claire et structurée sous Excel." },
-          { l: "Impact", t: "Amélioration du pilotage de la performance et renforcement de la capacité de décision basée sur les données." }
-        ],
-        imgs: ["img/PhotoProjetsas1.png", "img/PhotoProjetsas2.png"],
-        imgLayout: "illus-2",
-        showIllustrationTitle: true,
-        pdf: null
-      },
-      {
-        slug: "analyse-cancer-sein",
-        cat: "Analyse statistique",
-        title: "Analyse de données médicales – Cancer du sein",
-        sub: "Avec R — 2025",
-        accent: "#7a3a10",
-        bg: "#eddfc8",
-        desc: "Analyse statistique d'un dataset médical pour identifier des différences significatives et améliorer la lisibilité des données.",
-        metrics: ["R", "Power BI", "Santé"],
-        sections: [
-          { l: "Contexte", t: "Analyse d'un dataset médical réel portant sur le cancer du sein, avec des variables cliniques et biologiques issues de cas bénins et malins." },
-          { l: "Problème", t: "Données brutes nécessitant un contrôle qualité approfondi et une structuration avant toute analyse comparative fiable." },
-          { l: "Approche", t: "Nettoyage des données, gestion des valeurs manquantes, tests statistiques comparatifs (Student, Fisher) entre groupes de tumeurs bénignes et malignes. Création de visualisations Power BI." },
-          { l: "Résultats", t: "Identification de différences statistiquement significatives entre les deux groupes sur plusieurs variables cliniques clés." },
-          { l: "Impact", t: "Amélioration de la lisibilité des données et contribution à une meilleure compréhension des patterns médicaux différenciateurs." }
-        ],
-        imgs: [],
-        imgLayout: null,
-        showIllustrationTitle: false,
-        pdf: null
-      },
-      {
-        slug: "enquete-etudiante",
-        cat: "Data visualisation",
-        title: "Reporting et visualisation – Enquête étudiante",
-        sub: "Université Paris Cité — 2024",
-        accent: "#7a4210",
-        bg: "#e5d4b2",
-        desc: "Analyse de plus de 20 000 réponses pour produire des visualisations claires et exploitables.",
-        metrics: ["Power BI", "20k+ réponses", "Dashboard"],
-        sections: [
-          { l: "Contexte", t: "Enquête universitaire de grande envergure portant sur les pratiques étudiantes à l'Université Paris Cité, avec plus de 20 000 répondants." },
-          { l: "Problème", t: "Volume de données important et hétérogène, difficile à synthétiser et restituer sans outils et méthodes adaptés." },
-          { l: "Approche", t: "Analyses descriptives et comparatives pour identifier des tendances. Création de visualisations dynamiques et tableaux de bord Power BI, segmentation des résultats par profil." },
-          { l: "Résultats", t: "Tableaux de bord clairs et exploitables, tendances identifiées, restitution structurée adaptée à un public non spécialiste." },
-          { l: "Impact", t: "Aide à la décision pour les équipes universitaires grâce à des insights actionnables issus de données massives." }
-        ],
-        imgs: ["img/Projetsondage1.png", "img/PhotoProjetsondage2.png", "img/PhotoProjetsondage3.png"],
-        imgLayout: "illus-3",
-        showIllustrationTitle: true,
-        pdf: null
-      },
-      {
-        slug: "conformite-rgpd",
-        cat: "Data Governance & RGPD",
-        title: "Analyse de conformité RGPD & Data Governance",
-        sub: "Bases clients & campagnes — 2025",
-        accent: "#5c3a6b",
-        bg: "#e8dff0",
-        desc: "Audit de conformité RGPD sur des bases clients, achats et campagnes : classification des données, analyse des traitements, évaluation des risques et recommandations en data governance.",
-        metrics: ["RGPD", "Data Quality", "AIPD"],
-        sections: [
-          { l: "Contexte", t: "Analyse de bases de données clients, achats et campagnes dans une optique de mise en conformité réglementaire RGPD." },
-          { l: "Problème", t: "Absence de classification formelle des données, traitements non documentés et risques de non-conformité identifiés sur plusieurs flux." },
-          { l: "Approche", t: "Identification et classification des données (personnelles, indirectes, sensibles). Définition des bases légales et des durées de conservation. Réalisation d'une AIPD et analyse des risques." },
-          { l: "Résultats", t: "Cartographie complète des données et des traitements, évaluation qualitative de la fiabilité des données, identification des zones de non-conformité." },
-          { l: "Impact", t: "Recommandations concrètes en data governance : sécurisation, gestion des accès, pseudonymisation et conformité réglementaire." }
-        ],
-        imgs: [],
-        imgLayout: null,
-        showIllustrationTitle: false,
-        pdf: null
-      },
-      {
-        slug: "powerbi-carte",
-        cat: "Power BI & Data Visualisation",
-        title: "Visualisation cartographique & tableaux de bord",
-        sub: "Power BI — 2025",
-        accent: "#1a5276",
-        bg: "#d6eaf8",
-        desc: "Conception de tableaux de bord interactifs intégrant des visualisations cartographiques pour restituer des données géospatiales de manière claire et exploitable.",
-        metrics: ["Power BI", "Carte", "Dashboard"],
-        sections: [
-          { l: "Contexte", t: "Besoin de restituer des données à dimension géographique de manière visuelle et interactive pour faciliter la prise de décision." },
-          { l: "Problème", t: "Données géospatiales brutes difficiles à interpréter sans visualisation adaptée et structurée." },
-          { l: "Approche", t: "Conception de rapports Power BI avec intégration de visuels cartographiques, filtres dynamiques et indicateurs clés pour explorer les données par zone géographique." },
-          { l: "Résultats", t: "Tableaux de bord interactifs permettant une lecture immédiate des données par territoire, avec navigation intuitive et filtres multi-niveaux." },
-          { l: "Impact", t: "Amélioration de la lisibilité des données géospatiales et aide à la décision basée sur la localisation." }
-        ],
-        imgs: ["img/Capture_decran_2026-04-01_13474.png"],
-        imgLayout: "illus-1",
-        showIllustrationTitle: false,
-        pdf: "img/datavizchallenge.pdf",
-        pdfLabel: "Data Viz Challenge"
-      },
-      {
-        slug: "stage",
-        cat: "Stage",
-        title: "Projet en cours de développement",
-        sub: "À venir — 2026",
-        accent: "#7a6a5a",
-        bg: "#ece9e4",
-        desc: "Ce projet sera détaillé prochainement. Revenez bientôt pour découvrir les missions et réalisations de ce stage.",
-        metrics: ["À venir"],
-        sections: [{ l: "Contexte", t: "Contenu à venir." }],
-        imgs: [],
-        imgLayout: null,
-        showIllustrationTitle: false,
-        pdf: null
-      }
-    ];
+const PROJECTS = [
+  {
+    slug: "reporting-sas-excel",
+    cat: "Automatisation & pilotage",
+    title: "Automatisation du reporting et du pilotage",
+    sub: "SAS & Excel — 2025",
+    accent: "#8f3a2e",
+    bg: "#e8d9c5",
+    desc: "Mise en place d'un système automatisé pour industrialiser la production d'indicateurs et améliorer le suivi de la performance.",
+    metrics: ["SAS", "Excel", "KPI"],
+    sections: [
+      { l: "Contexte", t: "Besoin d'industrialiser la production de reporting dans un environnement data structuré, avec des traitements récurrents à piloter efficacement." },
+      { l: "Problème", t: "Des traitements répétitifs et chronophages, sans automatisation ni standardisation des indicateurs de suivi." },
+      { l: "Approche", t: "Développement de macros SAS paramétrables à partir d'un fichier de pilotage. Structuration des sorties Excel pour faciliter la lecture et la prise de décision." },
+      { l: "Résultats", t: "Production automatisée d'indicateurs KPI, réduction significative du temps de traitement, restitution claire et structurée sous Excel." },
+      { l: "Impact", t: "Amélioration du pilotage de la performance et renforcement de la capacité de décision basée sur les données." }
+    ],
+    imgs: ["img/PhotoProjetsas1.png", "img/PhotoProjetsas2.png"],
+    imgLayout: "illus-2",
+    showIllustrationTitle: true,
+    pdf: null
+  },
+  {
+    slug: "analyse-cancer-sein",
+    cat: "Analyse statistique",
+    title: "Analyse de données médicales – Cancer du sein",
+    sub: "Avec R — 2025",
+    accent: "#7a3a10",
+    bg: "#eddfc8",
+    desc: "Analyse statistique d'un dataset médical pour identifier des différences significatives et améliorer la lisibilité des données.",
+    metrics: ["R", "Power BI", "Santé"],
+    sections: [
+      { l: "Contexte", t: "Analyse d'un dataset médical réel portant sur le cancer du sein, avec des variables cliniques et biologiques issues de cas bénins et malins." },
+      { l: "Problème", t: "Données brutes nécessitant un contrôle qualité approfondi et une structuration avant toute analyse comparative fiable." },
+      { l: "Approche", t: "Nettoyage des données, gestion des valeurs manquantes, tests statistiques comparatifs (Student, Fisher) entre groupes de tumeurs bénignes et malignes. Création de visualisations Power BI." },
+      { l: "Résultats", t: "Identification de différences statistiquement significatives entre les deux groupes sur plusieurs variables cliniques clés." },
+      { l: "Impact", t: "Amélioration de la lisibilité des données et contribution à une meilleure compréhension des patterns médicaux différenciateurs." }
+    ],
+    imgs: [],
+    imgLayout: null,
+    showIllustrationTitle: false,
+    pdf: null
+  },
+  {
+    slug: "enquete-etudiante",
+    cat: "Data visualisation",
+    title: "Reporting et visualisation – Enquête étudiante",
+    sub: "Université Paris Cité — 2024",
+    accent: "#7a4210",
+    bg: "#e5d4b2",
+    desc: "Analyse de plus de 20 000 réponses pour produire des visualisations claires et exploitables.",
+    metrics: ["Power BI", "20k+ réponses", "Dashboard"],
+    sections: [
+      { l: "Contexte", t: "Enquête universitaire de grande envergure portant sur les pratiques étudiantes à l'Université Paris Cité, avec plus de 20 000 répondants." },
+      { l: "Problème", t: "Volume de données important et hétérogène, difficile à synthétiser et restituer sans outils et méthodes adaptés." },
+      { l: "Approche", t: "Analyses descriptives et comparatives pour identifier des tendances. Création de visualisations dynamiques et tableaux de bord Power BI, segmentation des résultats par profil." },
+      { l: "Résultats", t: "Tableaux de bord clairs et exploitables, tendances identifiées, restitution structurée adaptée à un public non spécialiste." },
+      { l: "Impact", t: "Aide à la décision pour les équipes universitaires grâce à des insights actionnables issus de données massives." }
+    ],
+    imgs: [
+      "img/Projetsondage1.png",
+      "img/PhotoProjetsondage2.png",
+      "img/PhotoProjetsondage3.png",
+      "img/Freins.png"
+    ],
+    imgLayout: "illus-2",
+    showIllustrationTitle: true,
+    pdf: null
+  },
+  {
+    slug: "conformite-rgpd",
+    cat: "Data Governance & RGPD",
+    title: "Analyse de conformité RGPD & Data Governance",
+    sub: "Bases clients & campagnes — 2025",
+    accent: "#5c3a6b",
+    bg: "#e8dff0",
+    desc: "Audit de conformité RGPD sur des bases clients, achats et campagnes : classification des données, analyse des traitements, évaluation des risques et recommandations en data governance.",
+    metrics: ["RGPD", "Data Quality", "AIPD"],
+    sections: [
+      { l: "Contexte", t: "Analyse de bases de données clients, achats et campagnes dans une optique de mise en conformité réglementaire RGPD." },
+      { l: "Problème", t: "Absence de classification formelle des données, traitements non documentés et risques de non-conformité identifiés sur plusieurs flux." },
+      { l: "Approche", t: "Identification et classification des données (personnelles, indirectes, sensibles). Définition des bases légales et des durées de conservation. Réalisation d'une AIPD et analyse des risques." },
+      { l: "Résultats", t: "Cartographie complète des données et des traitements, évaluation qualitative de la fiabilité des données, identification des zones de non-conformité." },
+      { l: "Impact", t: "Recommandations concrètes en data governance : sécurisation, gestion des accès, pseudonymisation et conformité réglementaire." }
+    ],
+    imgs: [],
+    imgLayout: null,
+    showIllustrationTitle: false,
+    pdf: null
+  },
+  {
+    slug: "powerbi-carte",
+    cat: "Power BI & Data Visualisation",
+    title: "Visualisation cartographique & tableaux de bord",
+    sub: "Power BI — 2025",
+    accent: "#1a5276",
+    bg: "#d6eaf8",
+    desc: "Conception de tableaux de bord interactifs intégrant des visualisations cartographiques pour restituer des données géospatiales de manière claire et exploitable.",
+    metrics: ["Power BI", "Carte", "Dashboard"],
+    sections: [
+      { l: "Contexte", t: "Besoin de restituer des données à dimension géographique de manière visuelle et interactive pour faciliter la prise de décision." },
+      { l: "Problème", t: "Données géospatiales brutes difficiles à interpréter sans visualisation adaptée et structurée." },
+      { l: "Approche", t: "Conception de rapports Power BI avec intégration de visuels cartographiques, filtres dynamiques et indicateurs clés pour explorer les données par zone géographique." },
+      { l: "Résultats", t: "Tableaux de bord interactifs permettant une lecture immédiate des données par territoire, avec navigation intuitive et filtres multi-niveaux." },
+      { l: "Impact", t: "Amélioration de la lisibilité des données géospatiales et aide à la décision basée sur la localisation." }
+    ],
+    imgs: ["img/Capture_decran_2026-04-01_13474.png"],
+    imgLayout: "illus-1",
+    showIllustrationTitle: false,
+    pdf: "img/datavizchallenge.pdf",
+    pdfLabel: "Data Viz Challenge"
+  },
+  {
+    slug: "stage",
+    cat: "Stage",
+    title: "Projet en cours de développement",
+    sub: "À venir — 2026",
+    accent: "#7a6a5a",
+    bg: "#ece9e4",
+    desc: "Ce projet sera détaillé prochainement. Revenez bientôt pour découvrir les missions et réalisations de ce stage.",
+    metrics: ["À venir"],
+    sections: [{ l: "Contexte", t: "Contenu à venir." }],
+    imgs: [],
+    imgLayout: null,
+    showIllustrationTitle: false,
+    pdf: null
+  }
+];
 
     const LOGOS = {
       "SQL": { t: "img", s: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
